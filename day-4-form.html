@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Challenge 4 - Form Styling</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <main class="challenge-page">
+        <h1>Day 4: Form Styling</h1>
+        <p>A small contact form with custom inputs, focus states and an error state.</p>
+
+        <form class="form-demo" action="#" method="post">
+            <div class="field">
+                <label for="demo-name">Name</label>
+                <input type="text" id="demo-name" name="name" placeholder="Your name" required>
+                <span class="error-text">Please enter your name.</span>
+            </div>
+
+            <div class="field">
+                <label for="demo-email">Email</label>
+                <input type="email" id="demo-email" name="email" placeholder="name@gmail.com" required>
+                <span class="error-text">Please enter a valid email address.</span>
+            </div>
+
+            <div class="field">
+                <label for="demo-message">Message</label>
+                <textarea id="demo-message" name="message" rows="5" placeholder="Write at least 20 characters..." minlength="20" required></textarea>
+                <span class="error-text">Your message must be at least 20 characters.</span>
+            </div>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+        <h2>What I practised</h2>
+        <p>
+            I styled the inputs, gave them a green border on focus, and used
+            <code>:invalid:not(:placeholder-shown)</code> so the red border only
+            appears after the user has typed something wrong.
+        </p>
+
+        <a class="back-link" href="../index.html">Back to my portfolio</a>
+    </main>
+
+</body>
+</html>
