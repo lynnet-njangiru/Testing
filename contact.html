@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lynnet Njangiru - Contact</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="logo" href="index.html">Lynnet<span>.</span></a>
+
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-button">&#9776; Menu</label>
+
+            <nav class="site-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+        <section class="page-header">
+            <h1>Contact Me</h1>
+            <p>
+                If you want to ask me something, fill in this form. I usually
+                reply within two days.
+            </p>
+        </section>
+
+        <section class="section">
+            <div class="contact-layout">
+
+                <div class="form-card">
+                    <h2 class="section-title">Send a message</h2>
+
+                    <form action="#" method="post">
+                        <fieldset>
+                            <legend>Your details</legend>
+
+                            <div class="form-field">
+                                <label for="full-name">Full Name</label>
+                                <input type="text" id="full-name" name="fullName" placeholder="e.g. Lynnet Njangiru" required>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="name@gmail.com" required>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="phone">Phone Number (optional)</label>
+                                <input type="tel" id="phone" name="phone" placeholder="0712 345 678">
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Your message</legend>
+
+                            <div class="form-field">
+                                <label for="subject">Subject</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Please choose a subject</option>
+                                    <option value="question">A question about my work</option>
+                                    <option value="feedback">Feedback on my website</option>
+                                    <option value="hello">Just saying hello</option>
+                                </select>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="7"
+                                    placeholder="Write at least 50 characters here..."
+                                    minlength="50" required></textarea>
+                                <p class="form-help">Please write at least 50 characters.</p>
+                            </div>
+
+                            <div class="checkbox-field">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <label for="newsletter">Subscribe to my newsletter</label>
+                            </div>
+                        </fieldset>
+
+                        <button class="button" type="submit">Send Message</button>
+                    </form>
+                </div>
+
+                <aside class="contact-side">
+                    <div class="side-card">
+                        <h2>Other ways to reach me</h2>
+                        <ul class="contact-list">
+                            <li>
+                                <span>Email</span>
+                                <a href="mailto:lynnnjangiru149@gmail.com">lynnnjangiru149@gmail.com</a>
+                            </li>
+                            <li>
+                                <span>Phone</span>
+                                <a href="tel:+254712345678">0712 345 678</a>
+                            </li>
+                            <li>
+                                <span>GitHub</span>
+                                <a href="https://github.com/lynnnjangiru">@lynnnjangiru</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="side-card">
+                        <h2>Where I am</h2>
+                        <address>
+                            Nairobi, Kenya<br>
+                            East Africa Time (UTC+3)
+                        </address>
+                        <p>
+                            I am available for practice projects and feedback on
+                            my portfolio.
+                        </p>
+                    </div>
+                </aside>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-columns">
+            <div>
+                <h2 class="footer-title">Lynnet Njangiru</h2>
+                <p>
+                    A beginner web developer from Nairobi, learning HTML and CSS
+                    one week at a time.
+                </p>
+            </div>
+
+            <div>
+                <h2 class="footer-title">Pages</h2>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h2 class="footer-title">Contact</h2>
+                <ul class="footer-links">
+                    <li><a href="mailto:lynnnjangiru149@gmail.com">lynnnjangiru149@gmail.com</a></li>
+                    <li><a href="tel:+254712345678">0712 345 678</a></li>
+                    <li>Nairobi, Kenya</li>
+                </ul>
+            </div>
+
+            <div>
+                <h2 class="footer-title">Follow me</h2>
+                <ul class="footer-links">
+                    <li><a href="https://github.com/lynnnjangiru">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com">LinkedIn</a></li>
+                    <li><a href="https://www.instagram.com">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Lynnet Njangiru. Built for IYF Weekend Academy.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Practice</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            background-color: #f8fafc;
+        }
+
+        .page {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+
+        h1 {
+            margin-bottom: 8px;
+            font-size: 32px;
+        }
+
+        h2 {
+            margin-top: 40px;
+            margin-bottom: 12px;
+            font-size: 22px;
+        }
+
+        p {
+            margin-bottom: 12px;
+        }
+
+        /* ---------- Exercise 1: photo gallery ---------- */
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            margin-top: 12px;
+        }
+
+        .gallery img {
+            display: block;
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* ---------- Exercise 2: magazine layout ---------- */
+        .magazine {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "header"
+                "sidebar"
+                "main"
+                "footer";
+            gap: 12px;
+            margin-top: 12px;
+        }
+
+        .magazine .mag-header {
+            grid-area: header;
+            padding: 20px;
+            background-color: #0f766e;
+            color: #ffffff;
+            border-radius: 8px;
+        }
+
+        .magazine .mag-sidebar {
+            grid-area: sidebar;
+            padding: 20px;
+            background-color: #ccfbf1;
+            border-radius: 8px;
+        }
+
+        .magazine .mag-main {
+            grid-area: main;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+        }
+
+        .magazine .mag-footer {
+            grid-area: footer;
+            padding: 20px;
+            background-color: #0f172a;
+            color: #ffffff;
+            border-radius: 8px;
+        }
+
+        .mag-sidebar ul {
+            padding-left: 20px;
+        }
+
+        /* ---------- Exercise 3: project cards ---------- */
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            margin-top: 12px;
+        }
+
+        .project-card {
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+        }
+
+        .project-card h3 {
+            margin-bottom: 6px;
+            font-size: 18px;
+        }
+
+        .project-card p {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        .project-card a {
+            color: #0f766e;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* ---------- Responsive breakpoints ---------- */
+        @media (min-width: 600px) {
+            .gallery {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .project-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 900px) {
+            .magazine {
+                grid-template-columns: 220px 1fr;
+                grid-template-rows: auto 1fr 1fr auto;
+                grid-template-areas:
+                    "header header"
+                    "sidebar main"
+                    "sidebar main"
+                    "footer footer";
+            }
+
+            .project-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 32px;
+            color: #0f766e;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page">
+        <h1>Grid Practice</h1>
+        <p>
+            Week 2, Task 4.2. I used Grid Garden to practise, then built these
+            layouts with CSS Grid.
+        </p>
+
+        <h2>Exercise 1: Photo gallery</h2>
+        <p>
+            A three-column gallery with equal columns and a consistent gap. The
+            images fill their cells with <code>object-fit: cover</code>.
+        </p>
+
+        <div class="gallery">
+            <img src="https://placehold.co/300x200/0f766e/ffffff?text=Photo+1" alt="Gallery placeholder one">
+            <img src="https://placehold.co/300x200/f97316/ffffff?text=Photo+2" alt="Gallery placeholder two">
+            <img src="https://placehold.co/300x200/334155/ffffff?text=Photo+3" alt="Gallery placeholder three">
+            <img src="https://placehold.co/300x200/115e59/ffffff?text=Photo+4" alt="Gallery placeholder four">
+            <img src="https://placehold.co/300x200/ea580c/ffffff?text=Photo+5" alt="Gallery placeholder five">
+            <img src="https://placehold.co/300x200/64748b/ffffff?text=Photo+6" alt="Gallery placeholder six">
+        </div>
+
+        <h2>Exercise 2: Magazine layout</h2>
+        <p>
+            The header and footer span the full width, while the sidebar stays
+            next to the main content.
+        </p>
+
+        <div class="magazine">
+            <header class="mag-header">
+                <h3>My Learning Magazine</h3>
+            </header>
+
+            <aside class="mag-sidebar">
+                <h3>Topics</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS box model</li>
+                    <li>Flexbox</li>
+                    <li>CSS Grid</li>
+                </ul>
+            </aside>
+
+            <main class="mag-main">
+                <h3>This week in class</h3>
+                <p>
+                    I learned how to place items on a grid using rows and columns.
+                    The best part was using <code>grid-template-areas</code>,
+                    because I could draw the layout with words.
+                </p>
+                <p>
+                    I also learned that CSS Grid is good for two-dimensional
+                    layouts, while flexbox is better for one row or one column.
+                </p>
+            </main>
+
+            <footer class="mag-footer">
+                <p>&copy; 2026 Lynnet Njangiru</p>
+            </footer>
+        </div>
+
+        <h2>Exercise 3: Responsive project cards</h2>
+        <p>
+            These cards show three columns on a laptop, two on a tablet and one
+            on a phone. My real projects page uses the same idea.
+        </p>
+
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>About Me Page</h3>
+                <p>My first semantic HTML page.</p>
+                <a href="index.html">Open project</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Contact Form</h3>
+                <p>A form with labels and validation.</p>
+                <a href="contact.html">Open project</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Box Model Practice</h3>
+                <p>A page for learning padding, borders and margins.</p>
+                <a href="box-model-practice.html">Open project</a>
+            </div>
+        </div>
+
+        <a class="back-link" href="index.html">Back to my portfolio</a>
+    </div>
+
+</body>
+</html>
